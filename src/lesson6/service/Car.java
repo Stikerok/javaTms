@@ -1,6 +1,7 @@
 package lesson6.service;
 
 import lesson6.customException.ExceptionStart;
+import lesson6.customException.ExceptionStop;
 
 import java.util.Random;
 
@@ -22,6 +23,13 @@ public class Car {
             throw new ExceptionStart();
         } else {
             System.out.println("Car brand " + brand + " start");
+        }
+    }
+    public void stop() throws ExceptionStop {
+        if (new Random().nextInt(20) % 2 != 0) {
+            throw new ExceptionStop();
+        } else {
+            System.out.println("Car brand " + brand + " stop");
         }
     }
 
