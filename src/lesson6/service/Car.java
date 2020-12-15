@@ -22,14 +22,16 @@ public class Car {
         if (new Random().nextInt(20) % 2 == 0) {
             throw new ExceptionStart();
         } else {
-            System.out.println("Car brand " + brand + " start");
+            System.out.println("Car " + brand + ". Price: " + price +
+                    ", speed: " + speed + ". Start");
         }
     }
     public void stop() throws ExceptionStop {
         if (new Random().nextInt(20) % 2 != 0) {
             throw new ExceptionStop();
         } else {
-            System.out.println("Car brand " + brand + " stop");
+            System.out.println("Car " + brand + ". Price: " + price +
+                    ", speed: " + speed + ". Stop");
         }
     }
 
