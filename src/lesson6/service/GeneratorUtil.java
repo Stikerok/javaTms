@@ -28,7 +28,7 @@ public final class GeneratorUtil {
             while (true) {
                 int random = new Random().nextInt(122) + 1;
                 if (random >= 97) {
-                    brand.append(Character.toString(random));
+                    brand.append((char) random);
                     break;
                 }
             }

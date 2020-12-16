@@ -5,7 +5,6 @@ import lesson6.customException.ExceptionStop;
 import lesson6.service.Car;
 import lesson6.service.GeneratorUtil;
 
-import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
