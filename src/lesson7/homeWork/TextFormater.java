@@ -22,4 +22,15 @@ public class TextFormater {
         }
         return false;
     }
+
+    public static int censorText(String text, String blackWord) {
+        String[] arrWord = text.split(" ");
+        for (String word: arrWord) {
+            if (word.equalsIgnoreCase(blackWord)) {
+                System.out.println(text);
+                return 1;
+            }
+        }
+        return 0;
+    }
 }
