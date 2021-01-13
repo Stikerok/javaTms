@@ -21,8 +21,16 @@ public class Field {
     }
 
     public void outField() {
+        System.out.print("  ");
+        for (int i = 0; i < 10; i++) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
         for (int i = 0; i < sizeField; i++) {
             for (int j = 0; j < sizeField; j++) {
+                if (j == 0) {
+                    System.out.print(i + " ");
+                }
                 switch (field[i][j]) {
                     case 1:
                         System.out.print("X ");
