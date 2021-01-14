@@ -1,6 +1,5 @@
 package lesson9;
 
-import java.sql.Time;
 
 public class Bus {
     private String nameCompany;
@@ -13,11 +12,13 @@ public class Bus {
 
     @Override
     public String toString() {
-        return "Bus{" +
-                "nameCompany='" + nameCompany + '\'' +
-                ", departure='" + departure + '\'' +
-                ", arrival='" + arrival + '\'' +
-                '}';
+        return nameCompany + " " + departure + " " + arrival;
+    }
+
+    public int travelTimeCalculation() {
+        int depart = Integer.parseInt(departure.substring(0, 2)) * 60 + Integer.parseInt(departure.substring(3));
+        int arriv = Integer.parseInt(arrival.substring(0, 2)) * 60 + Integer.parseInt(arrival.substring(3));
+        return arriv - depart;
     }
 
     public String getNameCompany() {
