@@ -16,24 +16,65 @@ public class Field {
         for (int i = 0; i < sizeField; i++) {
             for (int j = 0; j < sizeField; j++) {
                 field[i][j] = 0;
-                System.out.print("* ");
+            }
+        }
+    }
+
+    public void outField() {
+        System.out.print("  ");
+        for (int i = 0; i < 10; i++) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+        for (int i = 0; i < sizeField; i++) {
+            for (int j = 0; j < sizeField; j++) {
+                if (j == 0) {
+                    System.out.print(i + " ");
+                }
+                switch (field[i][j]) {
+                    case 1:
+                        System.out.print("X ");
+                        break;
+                    case 3:
+                        System.out.print("# ");
+                        break;
+                    case 4:
+                        System.out.print("O ");
+                        break;
+                    default:
+                        System.out.print("* ");
+                }
             }
             System.out.println();
         }
         System.out.println();
     }
 
-    public void outField() {
+    public void outFieldEnemy() {
+        System.out.print("  ");
+        for (int i = 0; i < 10; i++) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
         for (int i = 0; i < sizeField; i++) {
             for (int j = 0; j < sizeField; j++) {
-                if (field[i][j] == 1) {
-                    System.out.print("X ");
-                } else {
-                    System.out.print("* ");
+                if (j == 0) {
+                    System.out.print(i + " ");
+                }
+                switch (field[i][j]) {
+                    case 3:
+                        System.out.print("# ");
+                        break;
+                    case 4:
+                        System.out.print("O ");
+                        break;
+                    default:
+                        System.out.print("* ");
                 }
             }
             System.out.println();
         }
+        System.out.println();
     }
 
     public void placeShip(Ship ship) {
@@ -93,7 +134,7 @@ public class Field {
                     field[coordinateY[0] + 1][coordinateX[0] - 1] = 2;
                     field[coordinateY[0] - 1][coordinateX[0] - 1] = 2;
                 }
-                if (coordinateX[coordinateY.length - 1] != 9) {
+                if (coordinateX[coordinateX.length - 1] != 9) {
                     field[coordinateY[0]][coordinateX[coordinateX.length - 1] + 1] = 2;
                     field[coordinateY[0] + 1][coordinateX[coordinateX.length - 1] + 1] = 2;
                     field[coordinateY[0] - 1][coordinateX[coordinateX.length - 1] + 1] = 2;

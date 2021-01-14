@@ -4,7 +4,6 @@ import java.util.Random;
 
 public abstract class RandomPlaceShip {
 
-
     public static void randomPlace(Field field) {
         int lengthShip = 4;
         int quantityShips = 1;
