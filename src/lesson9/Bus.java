@@ -14,7 +14,7 @@ public class Bus {
     public String toString() {
         return nameCompany + " " + departure + " " + arrival;
     }
-
+    // метод для вычисления времени в пути
     public int travelTimeCalculation() {
         int depart = Integer.parseInt(departure.substring(0, 2)) * 60 + Integer.parseInt(departure.substring(3));
         int arriv = Integer.parseInt(arrival.substring(0, 2)) * 60 + Integer.parseInt(arrival.substring(3));
